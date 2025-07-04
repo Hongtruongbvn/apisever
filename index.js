@@ -29,6 +29,11 @@ app.get("/", (req, res) => {
 // Sử dụng product routes
 const productRoutes = require("./routers/product.routes");
 app.use("/api/products", productRoutes);
+const authRoutes = require("./routers/auth.routes");
+const orderRoutes = require("./routers/order.routes");
+
+app.use("/api/auth", authRoutes);
+app.use("/api/orders", orderRoutes);
 
 app.listen(port, () => {
   console.log("server is running at port:", port);
