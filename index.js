@@ -27,7 +27,7 @@ app.get("/", (req, res) => {
 });
 
 // Sử dụng product routes
-const productRoutes = require("./routes/product.routes");
+const productRoutes = require("./routers/product.routes");
 app.use("/api/products", productRoutes);
 
 app.listen(port, () => {
